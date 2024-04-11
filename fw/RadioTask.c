@@ -654,9 +654,6 @@ static void radioTaskFunction(UArg arg0, UArg arg1)
             /* scan forever (until stopped) */
             RadioWrapper_scan(statPHY, statChan, 0xFFFFFFFF, ourAddr, ourAddrRandom,
                     indicatePacket);
-        } else if (snifferState == WAIT_AUX_CONNECT_RSP) {
-            // Showldn't be here
-            snifferState = STATIC;
         }
     }
 }
